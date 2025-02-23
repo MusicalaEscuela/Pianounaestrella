@@ -1,0 +1,159 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Header con flexbox */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ddd;
+    flex-wrap: wrap; /* Permite que los elementos bajen si no hay espacio */
+}
+
+/* Centrar el título */
+header h1 {
+    font-size: 36px;
+    color: #333333;
+    margin: 0;
+    text-align: center;
+    flex: 1;
+}
+
+/* Logo */
+header img {
+    max-width: 120px;
+    height: auto;
+    margin-left: 10px;
+}
+
+/* Estilos para el campo de búsqueda y selector */
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+#searchInput, #columnSelect, #genreSelect {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilos de la tabla */
+.table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    table-layout: auto;
+    min-width: 600px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007BFF;
+    color: #ffffff;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+td a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Pie de página */
+footer {
+    font-size: 12px;
+    color: #555555;
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 24px;
+        text-align: center;
+        flex: 100%;
+    }
+
+    header img {
+        margin: 10px auto;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #searchInput, #columnSelect, #genreSelect {
+        width: 90%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    /* Tabla scrollable */
+    .table-wrapper {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+        min-width: 600px;
+        border-collapse: collapse;
+    }
+}
